@@ -11,4 +11,5 @@
     <color name="gradient_color2">#00E4FF</color>
     <color name="bg_view">#1D172B</color>
     <color name="text_title">#25EDDA</color>
+    <color name="info_title">#A2A2A2</color>
 </resources>

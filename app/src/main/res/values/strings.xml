@@ -5,8 +5,11 @@
     <string name="search_fragment">Search</string>
     <string name="notification_fragment">Notification</string>
     <string name="home_fragment_title_greeting">Hi, Cassandra!</string>
-    <string name="home_fragment_title_question">What are you looking for today</string>
+    <string name="home_fragment_title_question">What are you looking for today?</string>
     <string name="home_fragment_milongas">Milongas</string>
     <string name="home_fragment_teachers">Teachers</string>
     <string name="home_fragment_schools">Schools</string>
+    <string name="home_fragment_list_title_milongas">Milongas near you</string>
+    <string name="home_fragment_list_title_teachers">Teachers near you</string>
+    <string name="home_fragment_list_title_events">Events</string>
 </resources>
