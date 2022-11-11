@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homeFragment_title_greeting_txsz">22sp</dimen>
+</resources>

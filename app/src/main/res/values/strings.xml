@@ -1,9 +1,12 @@
 <resources>
     <string name="app_name">Resource</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="calender_fragment">Calendar</string>
     <string name="home_fragment">Home</string>
     <string name="search_fragment">Search</string>
     <string name="notification_fragment">Notification</string>
+    <string name="home_fragment_title_greeting">Hi, Cassandra!</string>
+    <string name="home_fragment_title_question">What are you looking for today</string>
+    <string name="home_fragment_milongas">Milongas</string>
+    <string name="home_fragment_teachers">Teachers</string>
+    <string name="home_fragment_schools">Schools</string>
 </resources>

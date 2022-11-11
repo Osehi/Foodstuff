@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".features.home.HomeFragment"
@@ -8,11 +14,186 @@
     >
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:textSize="24sp"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/homeFragment_menu_icon_iv"
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_menuicon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/homeFragment_title_greeting_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/inter_bold"
+        android:textAlignment="center"
+        android:text="@string/home_fragment_title_greeting"
+        android:textSize="@dimen/homeFragment_title_greeting_txsz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toEndOf="@+id/homeFragment_menu_icon_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homeFragment_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/inter"
+        android:textAlignment="center"
+        android:text="@string/home_fragment_title_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeFragment_menu_icon_iv"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_title_greeting_tv" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeFragment_base"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/bg_view"
+        app:layout_constraintTop_toBottomOf="@id/homeFragment_question"
+        app:shapeAppearance="@style/ShapeAppearance_custom_corners"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <TextView
+                android:id="@+id/home_fragment_milongas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/home_fragment_milongas"
+                android:textColor="@color/text_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_fragment_teachers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/home_fragment_teachers"
+                android:textColor="@color/text_title"
+                app:layout_constraintEnd_toStartOf="@id/home_fragment_schools"
+                app:layout_constraintHorizontal_bias="0.411"
+                app:layout_constraintStart_toEndOf="@+id/home_fragment_milongas"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_fragment_schools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="40dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/home_fragment_schools"
+                android:textColor="@color/text_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeFragmen_milongas_mcv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="-48dp"
+        app:cardCornerRadius="50dp"
+        android:backgroundTint="@color/bg_view"
+        app:layout_constraintBottom_toTopOf="@id/homeFragment_base"
+        app:layout_constraintEnd_toStartOf="@id/homeFragmen_teachers_mcv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_question"
+        app:layout_constraintVertical_bias="0.875" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_milongas"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeFragmen_teachers_mcv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-48dp"
+        android:backgroundTint="@color/bg_view"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@id/homeFragment_base"
+        app:layout_constraintEnd_toStartOf="@id/homeFragmen_schools_mcv"
+        app:layout_constraintStart_toEndOf="@id/homeFragmen_milongas_mcv"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_question"
+        app:layout_constraintVertical_bias="0.875">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_teachers"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/homeFragmen_schools_mcv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-48dp"
+        android:backgroundTint="@color/bg_view"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@id/homeFragment_base"
+        app:layout_constraintStart_toEndOf="@id/homeFragmen_teachers_mcv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeFragment_question"
+        app:layout_constraintVertical_bias="0.875">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_schools"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
