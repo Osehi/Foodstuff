@@ -16,7 +16,7 @@ class EventsAdapter(private val allEvents: List<Events>) : RecyclerView.Adapter<
             Glide.with(context).load(events.image).into(binding.eventsListItemEventIv)
             binding.eventsListItemEventDateTv.text = events.date
             binding.eventsListItemEventNameTv.text = events.nameOfEvent
-            binding.eventsListItemEventLocationTv.text = events.nameOfEvent
+            binding.eventsListItemEventLocationTv.text = events.eventLocation
         }
     }
 

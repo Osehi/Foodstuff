@@ -47,6 +47,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setMilongasRecyclerview()
         setTeachersRecyclerview()
+        setEventsRecyclerview()
     }
 
     private fun setMilongasRecyclerview() {
@@ -66,8 +67,8 @@ class HomeFragment : Fragment() {
     private fun setEventsRecyclerview() {
         eventsRecyclerView = binding.eventsRv
         eventsAdapter = EventsAdapter(Events().geneerateEvents())
-        teachersRecyclerView.adapter = teachersAdapter
-        teachersAdapter.notifyDataSetChanged()
+        eventsRecyclerView.adapter = eventsAdapter
+        eventsAdapter.notifyDataSetChanged()
     }
 
     override fun onDestroy() {
