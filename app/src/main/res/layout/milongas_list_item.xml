@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    app:cardCornerRadius="16dp"
+    android:backgroundTint="@color/bg_view"
+    android:layout_marginHorizontal="8dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="2dp"
+    android:elevation="32dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/molingas_list_item_gdl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <ImageView
+            android:id="@+id/molingas_list_item_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/molingas_list_item_gdl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/milongasitemone" />
+
+        <TextView
+            android:id="@+id/molingas_list_item_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/milongas_list_item_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/molingas_list_item_title_tsx"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.093"
+            app:layout_constraintStart_toStartOf="@+id/molingas_list_item_gdl"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/milongas_list_item_rating_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/molingas_list_item_gdl"
+            app:layout_constraintTop_toBottomOf="@+id/molingas_list_item_title_tv"
+            app:srcCompat="@drawable/ic_star" />
+
+        <TextView
+            android:id="@+id/milongas_list_item_rating_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/milongas_list_item_rating"
+            android:textColor="@color/white"
+            android:textSize="@dimen/molingas_list_item_title_tsx"
+            app:layout_constraintStart_toEndOf="@+id/milongas_list_item_rating_iv"
+            app:layout_constraintTop_toBottomOf="@+id/molingas_list_item_title_tv" />
+
+        <TextView
+            android:id="@+id/milongas_list_item_rating_percent_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/milongas_list_item_rating_percent"
+            android:textColor="@color/info_title"
+            android:textSize="@dimen/molingas_list_item_title_tsx"
+            app:layout_constraintStart_toEndOf="@+id/milongas_list_item_rating_tv"
+            app:layout_constraintTop_toTopOf="@+id/milongas_list_item_rating_tv" />
+
+        <TextView
+            android:id="@+id/milongas_list_item_distance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/milongas_list_item_time_duration"
+            android:textColor="@color/info_title"
+            android:textSize="@dimen/molingas_list_item_title_tsx"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toStartOf="@+id/molingas_list_item_gdl"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_list_item_rating_tv" />
+
+        <ImageView
+            android:id="@+id/milongas_list_item_direction"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintStart_toStartOf="@+id/molingas_list_item_gdl"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_list_item_distance_tv"
+            app:srcCompat="@drawable/ic_distance" />
+
+        <TextView
+            android:id="@+id/milongas_list_item_direction_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/milongas_list_item_direction"
+            android:textColor="@color/info_title"
+            android:textSize="@dimen/molingas_list_item_title_tsx"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.006"
+            app:layout_constraintStart_toEndOf="@+id/milongas_list_item_direction"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_list_item_distance_tv" />
+
+        <View
+            android:id="@+id/milongas_divider_v"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintStart_toEndOf="@id/molingas_list_item_gdl"
+            app:layout_constraintTop_toBottomOf="@id/milongas_list_item_direction_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/info_title"
+            />
+
+        <ImageView
+            android:id="@+id/milongas_list_item_directions_iv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="@+id/molingas_list_item_gdl"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_divider_v"
+            app:srcCompat="@drawable/ic_directions" />
+
+        <TextView
+            android:id="@+id/milongas_list_item_directions_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/milongas_list_item_directions"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/milongas_list_item_directions_tsx"
+            app:layout_constraintStart_toEndOf="@+id/milongas_list_item_directions_iv"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_divider_v" />
+
+        <TextView
+            android:id="@+id/milongas_list_item_info_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/milongas_list_item_info"
+            android:textColor="@color/text_title"
+            android:textSize="@dimen/milongas_list_item_directions_tsx"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.196"
+            app:layout_constraintStart_toEndOf="@+id/milongas_list_item_directions_tv"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_divider_v" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

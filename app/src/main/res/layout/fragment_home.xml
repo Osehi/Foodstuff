@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_bg"
+        tools:context=".features.home.presentation.HomeFragment">
+
+        <ImageView
+            android:id="@+id/homeFragment_menu_icon_iv"
+            android:layout_width="25dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/ic_menuicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/homeFragment_title_greeting_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/home_fragment_title_greeting"
+            android:textAlignment="center"
+            android:textSize="@dimen/homeFragment_title_greeting_txsz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/homeFragment_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="@string/home_fragment_title_question"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/homeFragment_title_greeting_tv"
+            app:layout_constraintTop_toBottomOf="@+id/homeFragment_title_greeting_tv" />
+
+
+        <View
+            android:id="@+id/homeFragment_base"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/background_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeFragment_question"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/round_card_milongas_mcv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/bg_view"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="16dp"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintEnd_toStartOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/round_card_teachers_mcv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_milongas"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/round_card_teachers_mcv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/bg_view"
+            app:layout_constraintTop_toBottomOf="@id/homeFragment_question"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="16dp"
+            android:elevation="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/round_card_school_mcv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/round_card_milongas_mcv"
+            tools:layout_editor_absoluteY="76dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_teachers"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/round_card_school_mcv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/bg_view"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="16dp"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintTop_toTopOf="@+id/round_card_teachers_mcv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_schools"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/card_title_milongas"
+            style="@style/card_title"
+            android:text="@string/home_fragment_milongas"
+            app:layout_constraintEnd_toEndOf="@+id/round_card_milongas_mcv"
+            app:layout_constraintStart_toStartOf="@+id/round_card_milongas_mcv"
+            app:layout_constraintTop_toBottomOf="@+id/round_card_milongas_mcv" />
+
+        <TextView
+            android:id="@+id/card_title_teachers"
+            style="@style/card_title"
+            android:text="@string/home_fragment_teachers"
+            app:layout_constraintEnd_toEndOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintStart_toStartOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintTop_toBottomOf="@+id/round_card_teachers_mcv" />
+
+        <TextView
+            android:id="@+id/card_title_schools"
+            style="@style/card_title"
+            android:text="@string/home_fragment_schools"
+            app:layout_constraintEnd_toEndOf="@+id/round_card_school_mcv"
+            app:layout_constraintStart_toStartOf="@+id/round_card_school_mcv"
+            app:layout_constraintTop_toBottomOf="@+id/round_card_school_mcv" />
+
+        <TextView
+            android:id="@+id/home_fragment_list_title_milongas_tv"
+            android:text="@string/home_fragment_list_title_milongas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_title_teachers"
+            style="@style/rv_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/milongas_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/milongas_list_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_milongas_tv"
+            app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_milongas_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:id="@+id/home_fragment_list_title_teachers_tv"
+            android:text="@string/home_fragment_list_title_teachers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/milongas_rv"
+            style="@style/rv_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/teachers_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/teachers_list_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_teachers_tv"
+            app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_teachers_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:id="@+id/home_fragment_list_title_events_tv"
+            android:text="@string/home_fragment_list_title_events"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teachers_rv"
+            style="@style/rv_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/events_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/events_list_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_events_tv"
+            app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_events_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

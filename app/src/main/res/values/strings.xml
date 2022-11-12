@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Resource</string>
+    <string name="calender_fragment">Calendar</string>
+    <string name="home_fragment">Home</string>
+    <string name="search_fragment">Search</string>
+    <string name="notification_fragment">Notification</string>
+    <string name="home_fragment_title_greeting">Hi, Cassandra!</string>
+    <string name="home_fragment_title_question">What are you looking for today?</string>
+    <string name="home_fragment_milongas">Milongas</string>
+    <string name="home_fragment_teachers">Teachers</string>
+    <string name="home_fragment_schools">Schools</string>
+    <string name="home_fragment_list_title_milongas">Milongas near you</string>
+    <string name="home_fragment_list_title_teachers">Teachers near you</string>
+    <string name="home_fragment_list_title_events">Events</string>
+    <string name="milongas_list_item_title">La Rosa Milonga</string>
+    <string name="milongas_list_item_rating">5.0</string>
+    <string name="milongas_list_item_rating_percent">(100)</string>
+    <string name="milongas_list_item_time_duration">From 15:30 to 18:00</string>
+    <string name="milongas_list_item_direction">15 Km away</string>
+    <string name="milongas_list_item_directions">Directions</string>
+    <string name="milongas_list_item_info">+ Info</string>
+    <string name="teachers_list_item_title">Ines Muzzopappa</string>
+    <string name="teachers_list_item_rating">5.0</string>
+    <string name="teachers_list_item_rating_percent">(100)</string>
+    <string name="teachers_list_item_duration_experience">20 years</string>
+    <string name="teachers_list_item_duration_experience_expression">of experience</string>
+    <string name="teachers_list_item_direction">15 Km away</string>
+    <string name="teachers_list_item_book_lesson">Book a Lesson</string>
+    <string name="events_list_item_event_date">Fri.Aug 22th at 15:00 - Aug 13</string>
+    <string name="events_list_item_event_name">El Cachivache Orkesta -NY Queer Tango…</string>
+    <string name="events_list_item_event_location">Hungarian House of New York - New York</string>
+    <string name="events_list_item_info">+ Info</string>
+
+
 </resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:strokeColor="@color/black"
+    app:strokeWidth="2dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="16dp"
+    android:elevation="16dp"
+    android:backgroundTint="@color/bg_view"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/events_list_item_gdl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <ImageView
+            android:id="@+id/events_list_item_event_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/events_list_item_gdl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/eventsflyers" />
+
+        <TextView
+            android:id="@+id/events_list_item_event_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/events_list_item_event_date"
+            android:textColor="@color/white"
+            android:textSize="@dimen/events_list_item_event_date_tsz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.134"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/events_list_item_gdl" />
+
+        <TextView
+            android:id="@+id/events_list_item_event_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/events_list_item_event_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/events_list_item_event_name_tsz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.34"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/events_list_item_event_date_tv" />
+
+        <TextView
+            android:id="@+id/events_list_item_event_location_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="@string/events_list_item_event_location"
+            android:textColor="@color/info_title"
+            android:textSize="@dimen/events_list_item_event_location_tsz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.235"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/events_list_item_event_name_tv" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/events_list_item_mcv"
+            android:layout_width="00dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp"
+            android:backgroundTint="@color/bg_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/events_list_item_event_location_tv"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <TextView
+                    android:id="@+id/events_list_item_info_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/events_list_item_info_tsz"
+                    android:text="@string/events_list_item_info"
+                    android:textColor="@color/text_title"
+                    android:fontFamily="@font/inter"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
