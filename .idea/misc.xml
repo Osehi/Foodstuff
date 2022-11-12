@@ -6,9 +6,10 @@
         <entry key="app/src/main/res/drawable/gradient_bg.xml" value="0.1395" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.25833333333333336" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3434783935546875" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.24427083333333333" />
+        <entry key="app/src/main/res/layout/milongas_list_item.xml" value="0.75" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.1" />
       </map>
     </option>

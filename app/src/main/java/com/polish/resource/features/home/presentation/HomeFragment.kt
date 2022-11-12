@@ -1,4 +1,4 @@
-package com.polish.resource.features.home
+package com.polish.resource.features.home.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater

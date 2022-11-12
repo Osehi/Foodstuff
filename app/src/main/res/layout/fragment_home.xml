@@ -9,7 +9,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.home.HomeFragment"
+    tools:context=".features.home.presentation.HomeFragment"
     android:background="@drawable/gradient_bg"
     >
     <ImageView
@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.35" />
+                app:layout_constraintGuide_percent="0.38" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/home_fragment_milongas_rv"
@@ -140,7 +140,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="1dp" />
+                tools:layout_editor_absoluteY="1dp"
+                android:layout_marginStart="18dp"
+                tools:listitem="@layout/milongas_list_item"
+                />
 
             <TextView
                 android:id="@+id/home_fragment_list_title_teachers_tv"
