@@ -12,4 +12,6 @@
     <color name="bg_view">#1D172B</color>
     <color name="text_title">#25EDDA</color>
     <color name="info_title">#A2A2A2</color>
+    <color name="pri_color">#7D7985</color>
+    <color name="pri_variant">#47939A</color>
 </resources>
