@@ -26,6 +26,10 @@
     <string name="teachers_list_item_duration_experience_expression">of experience</string>
     <string name="teachers_list_item_direction">15 Km away</string>
     <string name="teachers_list_item_book_lesson">Book a Lesson</string>
+    <string name="events_list_item_event_date">Fri.Aug 22th at 15:00 - Aug 13</string>
+    <string name="events_list_item_event_name">El Cachivache Orkesta -NY Queer Tango…</string>
+    <string name="events_list_item_event_location">Hungarian House of New York - New York</string>
+    <string name="events_list_item_info">+ Info</string>
 
 
 </resources>

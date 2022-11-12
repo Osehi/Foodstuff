@@ -3,4 +3,8 @@
     <dimen name="homeFragment_title_greeting_txsz">22sp</dimen>
     <dimen name="milongas_list_item_directions_tsx">12sp</dimen>
     <dimen name="molingas_list_item_title_tsx">12sp</dimen>
+    <dimen name="events_list_item_event_date_tsz">9sp</dimen>
+    <dimen name="events_list_item_event_name_tsz">10</dimen>
+    <dimen name="events_list_item_event_location_tsz">9sp</dimen>
+    <dimen name="events_list_item_info_tsz">12</dimen>
 </resources>

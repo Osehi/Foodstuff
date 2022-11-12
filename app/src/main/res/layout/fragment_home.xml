@@ -200,6 +200,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                tools:listitem="@layout/events_list_item"
+                android:layout_marginStart="18dp"
                 tools:layout_editor_absoluteX="55dp"
                 tools:layout_editor_absoluteY="368dp" />
 

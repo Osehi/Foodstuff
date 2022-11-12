@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.17446043165467626" />
         <entry key="app/src/main/res/drawable/gradient_bg.xml" value="0.1395" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/events_list_item.xml" value="0.11944444444444445" />
+        <entry key="app/src/main/res/layout/events_list_item.xml" value="0.55" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.25833333333333336" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2604278564453125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.48116760253906254" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.24427083333333333" />
         <entry key="app/src/main/res/layout/milongas_list_item.xml" value="0.75" />
