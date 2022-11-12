@@ -6,294 +6,228 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     >
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".features.home.presentation.HomeFragment"
-    android:background="@drawable/gradient_bg"
-    >
-    <ImageView
-        android:id="@+id/homeFragment_menu_icon_iv"
-        android:layout_width="25dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/ic_menuicon"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/homeFragment_title_greeting_tv"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/inter_bold"
-        android:textAlignment="center"
-        android:text="@string/home_fragment_title_greeting"
-        android:textSize="@dimen/homeFragment_title_greeting_txsz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.405"
-        app:layout_constraintStart_toEndOf="@+id/homeFragment_menu_icon_iv"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/gradient_bg"
+        tools:context=".features.home.presentation.HomeFragment">
 
-    <TextView
-        android:id="@+id/homeFragment_question"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/inter"
-        android:textAlignment="center"
-        android:text="@string/home_fragment_title_question"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homeFragment_menu_icon_iv"
-        app:layout_constraintTop_toBottomOf="@+id/homeFragment_title_greeting_tv" />
+        <ImageView
+            android:id="@+id/homeFragment_menu_icon_iv"
+            android:layout_width="25dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/ic_menuicon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/homeFragment_base"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="68dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:backgroundTint="@color/bg_view"
-        app:layout_constraintTop_toBottomOf="@id/homeFragment_question"
-        app:shapeAppearance="@style/ShapeAppearance_custom_corners"
-        >
+        <TextView
+            android:id="@+id/homeFragment_title_greeting_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/home_fragment_title_greeting"
+            android:textAlignment="center"
+            android:textSize="@dimen/homeFragment_title_greeting_txsz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/home_fragment_milongas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginTop="48dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/home_fragment_milongas"
-                android:textColor="@color/text_title"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/home_fragment_teachers"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="48dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/home_fragment_teachers"
-                android:textColor="@color/text_title"
-                app:layout_constraintEnd_toStartOf="@id/home_fragment_schools"
-                app:layout_constraintHorizontal_bias="0.411"
-                app:layout_constraintStart_toEndOf="@+id/home_fragment_milongas"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/home_fragment_schools"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="40dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/home_fragment_schools"
-                android:textColor="@color/text_title"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/home_fragment_milongas_list_top_gdl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.18" />
-
-            <TextView
-                android:id="@+id/home_fragment_list_title_milongas_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter"
-                android:text="@string/home_fragment_list_title_milongas"
-                android:textColor="@color/info_title"
-                app:layout_constraintBottom_toTopOf="@id/home_fragment_milongas_list_top_gdl"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.094"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/home_fragment_milongas" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/home_fragment_milongas_list_bottom_gdl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.38" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/home_fragment_milongas_rv"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toBottomOf="@id/home_fragment_milongas_list_top_gdl"
-                app:layout_constraintBottom_toTopOf="@id/home_fragment_milongas_list_bottom_gdl"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="1dp"
-                android:layout_marginStart="18dp"
-                tools:listitem="@layout/milongas_list_item"
-                />
-
-            <TextView
-                android:id="@+id/home_fragment_list_title_teachers_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/home_fragment_list_title_teachers"
-                android:textColor="@color/info_title"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.094"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_fragment_milongas_list_bottom_gdl" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/home_fragment_teachers_list_bottom_gdl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.76" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/home_fragment_teachers_rv"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_teachers_tv"
-                app:layout_constraintBottom_toTopOf="@id/home_fragment_teachers_list_bottom_gdl"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="18dp"
-                tools:layout_editor_absoluteX="26dp"
-                tools:layout_editor_absoluteY="154dp"
-                tools:listitem="@layout/teachers_list_item"
-                />
-
-            <TextView
-                android:id="@+id/home_fragment_list_title_events_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:fontFamily="@font/inter"
-                android:text="@string/home_fragment_list_title_events"
-                android:textColor="@color/info_title"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.073"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_fragment_teachers_list_bottom_gdl" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/home_fragment_events_rv"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_events_tv"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                tools:listitem="@layout/events_list_item"
-                android:layout_marginStart="18dp"
-                tools:layout_editor_absoluteX="55dp"
-                tools:layout_editor_absoluteY="368dp" />
+        <TextView
+            android:id="@+id/homeFragment_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:text="@string/home_fragment_title_question"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/homeFragment_title_greeting_tv"
+            app:layout_constraintTop_toBottomOf="@+id/homeFragment_title_greeting_tv" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/homeFragment_base"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/background_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/homeFragment_question"
+            app:layout_constraintVertical_bias="0.0" />
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/round_card_milongas_mcv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/bg_view"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="16dp"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintEnd_toStartOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/round_card_teachers_mcv">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/homeFragmen_milongas_mcv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="-48dp"
-        app:cardCornerRadius="50dp"
-        android:backgroundTint="@color/bg_view"
-        app:layout_constraintBottom_toTopOf="@id/homeFragment_base"
-        app:layout_constraintEnd_toStartOf="@id/homeFragmen_teachers_mcv"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeFragment_question"
-        app:layout_constraintVertical_bias="0.875" >
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:src="@drawable/ic_milongas"
-                />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_milongas"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/homeFragmen_teachers_mcv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="-48dp"
-        android:backgroundTint="@color/bg_view"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintBottom_toTopOf="@id/homeFragment_base"
-        app:layout_constraintEnd_toStartOf="@id/homeFragmen_schools_mcv"
-        app:layout_constraintStart_toEndOf="@id/homeFragmen_milongas_mcv"
-        app:layout_constraintTop_toBottomOf="@+id/homeFragment_question"
-        app:layout_constraintVertical_bias="0.875">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/round_card_teachers_mcv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/bg_view"
+            app:layout_constraintTop_toBottomOf="@id/homeFragment_question"
+            android:layout_marginTop="28dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="16dp"
+            android:elevation="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/round_card_school_mcv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/round_card_milongas_mcv"
+            tools:layout_editor_absoluteY="76dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_teachers"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_teachers"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/homeFragmen_schools_mcv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="-48dp"
-        android:backgroundTint="@color/bg_view"
-        app:cardCornerRadius="50dp"
-        app:layout_constraintBottom_toTopOf="@id/homeFragment_base"
-        app:layout_constraintStart_toEndOf="@id/homeFragmen_teachers_mcv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homeFragment_question"
-        app:layout_constraintVertical_bias="0.875">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/round_card_school_mcv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/bg_view"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="16dp"
+            android:elevation="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintTop_toTopOf="@+id/round_card_teachers_mcv">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_schools"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_schools"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/card_title_milongas"
+            style="@style/card_title"
+            android:text="@string/home_fragment_milongas"
+            app:layout_constraintEnd_toEndOf="@+id/round_card_milongas_mcv"
+            app:layout_constraintStart_toStartOf="@+id/round_card_milongas_mcv"
+            app:layout_constraintTop_toBottomOf="@+id/round_card_milongas_mcv" />
+
+        <TextView
+            android:id="@+id/card_title_teachers"
+            style="@style/card_title"
+            android:text="@string/home_fragment_teachers"
+            app:layout_constraintEnd_toEndOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintStart_toStartOf="@+id/round_card_teachers_mcv"
+            app:layout_constraintTop_toBottomOf="@+id/round_card_teachers_mcv" />
+
+        <TextView
+            android:id="@+id/card_title_schools"
+            style="@style/card_title"
+            android:text="@string/home_fragment_schools"
+            app:layout_constraintEnd_toEndOf="@+id/round_card_school_mcv"
+            app:layout_constraintStart_toStartOf="@+id/round_card_school_mcv"
+            app:layout_constraintTop_toBottomOf="@+id/round_card_school_mcv" />
+
+        <TextView
+            android:id="@+id/home_fragment_list_title_milongas_tv"
+            android:text="@string/home_fragment_list_title_milongas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_title_teachers"
+            style="@style/rv_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/milongas_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/milongas_list_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_milongas_tv"
+            app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_milongas_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:id="@+id/home_fragment_list_title_teachers_tv"
+            android:text="@string/home_fragment_list_title_teachers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/milongas_rv"
+            style="@style/rv_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/teachers_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/teachers_list_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_teachers_tv"
+            app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_teachers_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <TextView
+            android:id="@+id/home_fragment_list_title_events_tv"
+            android:text="@string/home_fragment_list_title_events"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teachers_rv"
+            style="@style/rv_header" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/events_rv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/events_list_item"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_events_tv"
+            app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_events_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

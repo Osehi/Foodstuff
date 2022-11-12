@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:strokeColor="@color/black"
     app:strokeWidth="2dp"
+    android:layout_marginHorizontal="8dp"
     app:cardCornerRadius="16dp"
     android:elevation="16dp"
     android:backgroundTint="@color/bg_view"
