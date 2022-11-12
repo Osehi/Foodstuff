@@ -19,4 +19,13 @@
     <string name="milongas_list_item_direction">15 Km away</string>
     <string name="milongas_list_item_directions">Directions</string>
     <string name="milongas_list_item_info">+ Info</string>
+    <string name="teachers_list_item_title">Ines Muzzopappa</string>
+    <string name="teachers_list_item_rating">5.0</string>
+    <string name="teachers_list_item_rating_percent">(100)</string>
+    <string name="teachers_list_item_duration_experience">20 years</string>
+    <string name="teachers_list_item_duration_experience_expression">of experience</string>
+    <string name="teachers_list_item_direction">15 Km away</string>
+    <string name="teachers_list_item_book_lesson">Book a Lesson</string>
+
+
 </resources>

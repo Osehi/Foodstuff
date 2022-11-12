@@ -20,7 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/molingas_list_item_gdl"
             android:layout_width="wrap_content"
@@ -127,7 +126,7 @@
             app:layout_constraintTop_toBottomOf="@+id/milongas_list_item_distance_tv" />
 
         <View
-            android:id="@+id/milongas_"
+            android:id="@+id/milongas_divider_v"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginStart="12dp"
@@ -145,7 +144,7 @@
             android:layout_marginTop="2dp"
             android:layout_marginStart="12dp"
             app:layout_constraintStart_toStartOf="@+id/molingas_list_item_gdl"
-            app:layout_constraintTop_toBottomOf="@+id/milongas_"
+            app:layout_constraintTop_toBottomOf="@+id/milongas_divider_v"
             app:srcCompat="@drawable/ic_directions" />
 
         <TextView
@@ -159,7 +158,7 @@
             android:textColor="@color/text_title"
             android:textSize="@dimen/milongas_list_item_directions_tsx"
             app:layout_constraintStart_toEndOf="@+id/milongas_list_item_directions_iv"
-            app:layout_constraintTop_toBottomOf="@+id/milongas_" />
+            app:layout_constraintTop_toBottomOf="@+id/milongas_divider_v" />
 
         <TextView
             android:id="@+id/milongas_list_item_info_tv"
@@ -173,7 +172,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.196"
             app:layout_constraintStart_toEndOf="@+id/milongas_list_item_directions_tv"
-            app:layout_constraintTop_toBottomOf="@+id/milongas_" />
+            app:layout_constraintTop_toBottomOf="@+id/milongas_divider_v" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

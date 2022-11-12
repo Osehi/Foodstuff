@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/teachers_list_item_mcv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/bg_view"
+        android:layout_marginTop="36dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"
+        android:elevation="32dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/teachers_list_item_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                android:fontFamily="@font/inter_bold"
+                android:text="@string/teachers_list_item_title"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.202"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/parents_list_item_rating_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_title_tv"
+                app:srcCompat="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/teachers_list_item_rating_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                android:text="@string/teachers_list_item_rating"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/parents_list_item_rating_iv"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_title_tv" />
+
+            <TextView
+                android:id="@+id/teachers_list_item_rating_percent_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                android:fontFamily="@font/inter"
+                android:text="@string/teachers_list_item_rating_percent"
+                android:textColor="@color/info_title"
+                app:layout_constraintStart_toEndOf="@+id/teachers_list_item_rating_tv"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_title_tv" />
+
+            <TextView
+                android:id="@+id/teachers_list_item_duration_experience_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/teachers_list_item_duration_experience"
+                android:textColor="@color/white"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_rating_tv" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/teachers_list_item_duration_experience_expression"
+                android:textColor="@color/info_title"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/teachers_list_item_duration_experience_tv"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_rating_percent_tv" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_duration_experience_tv"
+                app:srcCompat="@drawable/ic_distance" />
+
+            <TextView
+                android:id="@+id/teachers_list_item_direction_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                android:text="@string/teachers_list_item_direction"
+                android:textColor="@color/info_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_duration_experience_tv" />
+            <View
+                android:id="@+id/teachers_divider_v"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@id/teachers_list_item_direction_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/info_title"
+                />
+
+            <ImageView
+                android:id="@+id/teachers_list_item_icon_iv"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_list_item_direction_tv"
+                app:srcCompat="@drawable/ic_bookcalenda" />
+
+            <TextView
+                android:id="@+id/teachers_list_item_book_lesson_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/inter"
+                android:text="@string/teachers_list_item_book_lesson"
+                android:textColor="@color/text_title"
+                android:textSize="@dimen/molingas_list_item_title_tsx"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/teachers_list_item_icon_iv"
+                app:layout_constraintTop_toBottomOf="@+id/teachers_divider_v" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/teachers_list_item_photo_mcv"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="-48dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@id/teachers_list_item_mcv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.45"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/teachers_list_item_photo_iv"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/clari"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

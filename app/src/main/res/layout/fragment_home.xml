@@ -163,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.65" />
+                app:layout_constraintGuide_percent="0.76" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/home_fragment_teachers_rv"
@@ -173,8 +173,11 @@
                 app:layout_constraintBottom_toTopOf="@id/home_fragment_teachers_list_bottom_gdl"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:layout_marginStart="18dp"
                 tools:layout_editor_absoluteX="26dp"
-                tools:layout_editor_absoluteY="154dp" />
+                tools:layout_editor_absoluteY="154dp"
+                tools:listitem="@layout/teachers_list_item"
+                />
 
             <TextView
                 android:id="@+id/home_fragment_list_title_events_tv"
