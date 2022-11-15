@@ -1,7 +1,7 @@
 package com.polish.common.di
 
 import com.polish.common.constant.NetworkConstant
-import com.polish.resource.features.home.data.network.utils.header.HeaderInterceptor
+import com.polish.common.utils.header.HeaderInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

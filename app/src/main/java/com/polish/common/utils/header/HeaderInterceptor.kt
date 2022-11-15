@@ -1,4 +1,4 @@
-package com.polish.resource.features.home.data.network.utils.header
+package com.polish.common.utils.header
 
 import com.polish.common.constant.NetworkConstant
 import okhttp3.Interceptor
