@@ -4,14 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.17446043165467626" />
+        <entry key="app/src/main/res/drawable/background_view.xml" value="0.1855" />
         <entry key="app/src/main/res/drawable/gradient_bg.xml" value="0.1395" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/events_list_item.xml" value="0.55" />
+        <entry key="app/src/main/res/layout/events_list_item.xml" value="0.32727272727272727" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.25833333333333336" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.43448486328125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25435897435897437" />
         <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.24427083333333333" />
-        <entry key="app/src/main/res/layout/milongas_list_item.xml" value="0.75" />
+        <entry key="app/src/main/res/layout/milongas_list_item.xml" value="0.2608695652173913" />
         <entry key="app/src/main/res/layout/teachers_list_item.xml" value="0.335" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.1" />
       </map>
