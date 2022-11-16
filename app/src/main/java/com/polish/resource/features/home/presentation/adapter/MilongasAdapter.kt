@@ -15,7 +15,7 @@ class MilongasAdapter(val allMilongas: List<Milongas>) : RecyclerView.Adapter<Mi
             // initialize the views and bind
             Glide.with(context).load(milongas.image).into(binding.molingasListItemIv)
             binding.molingasListItemTitleTv.text = milongas.cardName
-            binding.milongasListItemRatingTv.text = milongas.rating.toString()
+//            binding.milongasListItemRatingTv.text = milongas.rating.toString()
         }
     }
 

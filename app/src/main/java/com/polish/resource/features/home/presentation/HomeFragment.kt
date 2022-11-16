@@ -5,15 +5,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.polish.resource.databinding.FragmentHomeBinding
+import com.polish.resource.features.home.data.network.model.getevents.GetEventsRequestBody
+import com.polish.resource.features.home.data.network.model.getteacherlist.GetTeacherListRequestBody
+import com.polish.resource.features.home.data.network.model.molingaslist.GetMilongasListRequestBody
 import com.polish.resource.features.home.presentation.adapter.EventsAdapter
 import com.polish.resource.features.home.presentation.adapter.MilongasAdapter
 import com.polish.resource.features.home.presentation.adapter.TeacherAdapter
 import com.polish.resource.features.mock.Events
 import com.polish.resource.features.mock.Milongas
 import com.polish.resource.features.mock.Teachers
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     /**
      * declare variables
@@ -25,6 +31,7 @@ class HomeFragment : Fragment() {
     private lateinit var milongasAdapter: MilongasAdapter
     private lateinit var teachersAdapter: TeacherAdapter
     private lateinit var eventsAdapter: EventsAdapter
+    private val homeFragmentViewModel: HomeFragmentViewModel by viewModels()
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -48,6 +55,8 @@ class HomeFragment : Fragment() {
         setMilongasRecyclerview()
         setTeachersRecyclerview()
         setEventsRecyclerview()
+
+        homeFragmentViewModel.allTangoHomeInfo(GetTeacherListRequestBody(), GetEventsRequestBody(), GetMilongasListRequestBody())
     }
 
     private fun setMilongasRecyclerview() {
