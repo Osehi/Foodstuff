@@ -5,18 +5,25 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.polish.resource.R
 import com.polish.resource.databinding.EventsListItemBinding
-import com.polish.resource.features.mock.Events
+import com.polish.resource.features.home.data.network.model.getevents.Event
 
-class EventsAdapter(private val allEvents: List<Events>) : RecyclerView.Adapter<EventsAdapter.EventViewHolder>() {
+class EventsAdapter(private val allEvents: List<Event>) : RecyclerView.Adapter<EventsAdapter.EventViewHolder>() {
 
     class EventViewHolder(private val binding: EventsListItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(events: Events, context: Context) {
+        fun bind(events: Event, context: Context) {
             // initialize the views and bind
-            Glide.with(context).load(events.image).into(binding.eventsListItemEventIv)
-            binding.eventsListItemEventDateTv.text = events.date
-            binding.eventsListItemEventNameTv.text = events.nameOfEvent
-            binding.eventsListItemEventLocationTv.text = events.eventLocation
+            if (events.images.isNotEmpty()) {
+                val imageItem = events.images[0]?.imageUrl
+                Glide.with(context).load(imageItem)
+                    .placeholder(R.drawable.ic_placeholder)
+                    .into(binding.eventsListItemEventIv)
+            }
+
+            binding.eventsListItemEventDateTv.text = events.event_start_date
+            binding.eventsListItemEventNameTv.text = events.event_name
+            binding.eventsListItemEventLocationTv.text = events.address
         }
     }
 

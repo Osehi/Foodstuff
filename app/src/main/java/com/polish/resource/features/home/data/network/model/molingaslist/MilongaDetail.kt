@@ -19,7 +19,7 @@ data class MilongaDetail(
     val milonga_lesson_start: String?,
     val milonga_name: String?,
     val milonga_opening_time: String?,
-    val milongas_rating: Int?,
+    val milongas_rating: Any?,
     val phone_number: String?,
     val profileImage: String?,
     val reviews_total_count: Int?,
