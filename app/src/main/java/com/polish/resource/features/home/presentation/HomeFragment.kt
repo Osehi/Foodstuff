@@ -4,20 +4,26 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.RecyclerView
+import com.polish.common.utils.resourcewrapper.Resource
 import com.polish.resource.databinding.FragmentHomeBinding
+import com.polish.resource.features.home.data.network.model.getevents.Event
 import com.polish.resource.features.home.data.network.model.getevents.GetEventsRequestBody
 import com.polish.resource.features.home.data.network.model.getteacherlist.GetTeacherListRequestBody
+import com.polish.resource.features.home.data.network.model.getteacherlist.Teacher
 import com.polish.resource.features.home.data.network.model.molingaslist.GetMilongasListRequestBody
+import com.polish.resource.features.home.data.network.model.molingaslist.Milongas
 import com.polish.resource.features.home.presentation.adapter.EventsAdapter
 import com.polish.resource.features.home.presentation.adapter.MilongasAdapter
 import com.polish.resource.features.home.presentation.adapter.TeacherAdapter
-import com.polish.resource.features.mock.Events
-import com.polish.resource.features.mock.Milongas
-import com.polish.resource.features.mock.Teachers
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -32,6 +38,9 @@ class HomeFragment : Fragment() {
     private lateinit var teachersAdapter: TeacherAdapter
     private lateinit var eventsAdapter: EventsAdapter
     private val homeFragmentViewModel: HomeFragmentViewModel by viewModels()
+    private lateinit var teacherList: MutableList<Teacher>
+    private lateinit var eventList: MutableList<Event>
+    private lateinit var milongasList: MutableList<Milongas>
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -52,13 +61,106 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        /**
+         * initialize views
+         */
+        teacherList = mutableListOf<Teacher>()
+        eventList = mutableListOf<Event>()
+        milongasList = mutableListOf<Milongas>()
         setMilongasRecyclerview()
         setTeachersRecyclerview()
         setEventsRecyclerview()
 
         homeFragmentViewModel.allTangoHomeInfo(GetTeacherListRequestBody(), GetEventsRequestBody(), GetMilongasListRequestBody())
+        getTeacherListObserver()
+        getEventListObserver()
+        getMilongasListObserver()
     }
 
+    private fun setTeachersRecyclerview() {
+        teachersRecyclerView = binding.teachersRv
+        teachersAdapter = TeacherAdapter(teacherList)
+        teachersRecyclerView.adapter = teachersAdapter
+    }
+
+    private fun setEventsRecyclerview() {
+        eventsRecyclerView = binding.eventsRv
+        eventsAdapter = EventsAdapter(eventList)
+        eventsRecyclerView.adapter = eventsAdapter
+    }
+
+    private fun setMilongasRecyclerview() {
+        milongasRecyclerView = binding.milongasRv
+        milongasAdapter = MilongasAdapter(milongasList)
+        milongasRecyclerView.adapter = milongasAdapter
+    }
+
+    private fun getTeacherListObserver() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                homeFragmentViewModel.getTeacherListResponse.collect {
+                    when (it) {
+                        is Resource.Success -> {
+                            binding.homeFragmentProgressBar.isVisible = false
+                            binding.homeFragmentListTitleTeachersTv.isVisible = true
+                            val allTeachers = it.data.teacher_list
+                            teacherList.addAll(allTeachers)
+                            teachersAdapter.notifyDataSetChanged()
+                        }
+                        is Resource.Error -> {
+                        }
+                        is Resource.Loading -> {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getEventListObserver() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                homeFragmentViewModel.getEventResponse.collect {
+                    when (it) {
+                        is Resource.Success -> {
+                            binding.homeFragmentProgressBar.isVisible = false
+                            binding.homeFragmentListTitleEventsTv.isVisible = true
+                            val allEvents = it.data.Event_List
+                            eventList.addAll(allEvents)
+                            eventsAdapter.notifyDataSetChanged()
+                        }
+                        is Resource.Error -> {
+                        }
+                        is Resource.Loading -> {
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getMilongasListObserver() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                homeFragmentViewModel.getMilongasListResponse.collect {
+                    when (it) {
+                        is Resource.Success -> {
+                            binding.homeFragmentProgressBar.isVisible = false
+                            binding.homeFragmentListTitleMilongasTv.isVisible = true
+                            val allMilongas = it.data.milongas_list
+                            milongasList.addAll(allMilongas)
+                            teachersAdapter.notifyDataSetChanged()
+                        }
+                        is Resource.Error -> {
+                        }
+                        is Resource.Loading -> {
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*
     private fun setMilongasRecyclerview() {
         milongasRecyclerView = binding.milongasRv
         milongasAdapter = MilongasAdapter(Milongas().generateMilongasInfo())
@@ -66,6 +168,8 @@ class HomeFragment : Fragment() {
         milongasAdapter.notifyDataSetChanged()
     }
 
+     */
+    /*
     private fun setTeachersRecyclerview() {
         teachersRecyclerView = binding.teachersRv
         teachersAdapter = TeacherAdapter(Teachers().getTeachersList())
@@ -73,12 +177,16 @@ class HomeFragment : Fragment() {
         teachersAdapter.notifyDataSetChanged()
     }
 
+     */
+    /*
     private fun setEventsRecyclerview() {
         eventsRecyclerView = binding.eventsRv
         eventsAdapter = EventsAdapter(Events().geneerateEvents())
         eventsRecyclerView.adapter = eventsAdapter
         eventsAdapter.notifyDataSetChanged()
     }
+
+     */
 
     override fun onDestroy() {
         super.onDestroy()

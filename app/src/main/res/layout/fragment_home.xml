@@ -179,6 +179,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_title_teachers"
+            android:visibility="gone"
+            tools:visibility="visible"
             style="@style/rv_header" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/milongas_rv"
@@ -197,6 +199,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/milongas_rv"
+            android:visibility="gone"
+            tools:visibility="visible"
             style="@style/rv_header" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/teachers_rv"
@@ -215,6 +219,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/teachers_rv"
+            android:visibility="gone"
+            tools:visibility="visible"
             style="@style/rv_header" />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/events_rv"
@@ -225,6 +231,15 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/home_fragment_list_title_events_tv"
             app:layout_constraintStart_toStartOf="@id/home_fragment_list_title_events_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <ProgressBar
+            android:id="@+id/home_fragment_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             />
 

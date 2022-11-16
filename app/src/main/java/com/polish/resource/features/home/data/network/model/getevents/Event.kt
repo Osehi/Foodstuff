@@ -10,7 +10,7 @@ data class Event(
     val event_name: String?,
     val event_start_date: String?,
     val id: Int?,
-    val images: List<Image?>?,
+    val images: List<Image?>,
     val lati: String?,
     val longi: String?,
     val status: String?,

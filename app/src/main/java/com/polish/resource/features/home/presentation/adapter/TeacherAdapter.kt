@@ -5,17 +5,23 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.polish.resource.R
 import com.polish.resource.databinding.TeachersListItemBinding
+import com.polish.resource.features.home.data.network.model.getteacherlist.Teacher
 import com.polish.resource.features.mock.Teachers
 
-class TeacherAdapter(val allTeachers: List<Teachers>) : RecyclerView.Adapter<TeacherAdapter.TeacherViewHolder>(){
+class TeacherAdapter(val allTeachers: List<Teacher>) : RecyclerView.Adapter<TeacherAdapter.TeacherViewHolder>(){
 
     class TeacherViewHolder(private val binding: TeachersListItemBinding): RecyclerView.ViewHolder(binding.root) {
-        fun bind(teacher: Teachers, context: Context) {
+        fun bind(teacher: Teacher, context: Context) {
             // initialize the views and bind
-            Glide.with(context).load(teacher.image).into(binding.teachersListItemPhotoIv)
-            binding.teachersListItemTitleTv.text = teacher.name
-            binding.teachersListItemRatingTv.text = teacher.rating.toString()
+            Glide.with(context).load(teacher.teacher_image)
+                .placeholder(R.drawable.ic_placeholder)
+                .into(binding.teachersListItemPhotoIv)
+            binding.teachersListItemTitleTv.text = teacher.teacher_name
+            binding.teachersListItemRatingTv.text = teacher.teacher_rating.toString()
+            binding.teachersListItemDurationExperienceTv.text = teacher.year_of_experience.toString()
+            binding.teachersListItemDirectionTv.text = teacher.distance
         }
     }
 

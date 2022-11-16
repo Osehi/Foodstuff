@@ -5,6 +5,6 @@ data class GetTeacherListResponse(
     val offset: Int?,
     val status: Boolean?,
     val teacher_count: Int?,
-    val teacher_list: List<Teacher?>?,
+    val teacher_list: List<Teacher>,
     val user_access: Int?
 )

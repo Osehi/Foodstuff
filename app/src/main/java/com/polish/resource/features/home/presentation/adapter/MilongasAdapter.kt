@@ -5,17 +5,21 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.polish.resource.R
 import com.polish.resource.databinding.MilongasListItemBinding
-import com.polish.resource.features.mock.Milongas
+import com.polish.resource.features.home.data.network.model.molingaslist.Milongas
+
 
 class MilongasAdapter(val allMilongas: List<Milongas>) : RecyclerView.Adapter<MilongasAdapter.MilongasViewHolder>() {
 
     class MilongasViewHolder(private val binding: MilongasListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(milongas: Milongas, context: Context) {
             // initialize the views and bind
-            Glide.with(context).load(milongas.image).into(binding.molingasListItemIv)
-            binding.molingasListItemTitleTv.text = milongas.cardName
-//            binding.milongasListItemRatingTv.text = milongas.rating.toString()
+            Glide.with(context).load(milongas.milonga_detail?.profileImage)
+                .placeholder(R.drawable.ic_placeholder)
+                .into(binding.molingasListItemIv)
+            binding.molingasListItemTitleTv.text = milongas.first_name
+            binding.milongasListItemRatingTv.text = milongas.rating.toString()
         }
     }
 

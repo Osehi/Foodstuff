@@ -29,7 +29,9 @@
 
             <TextView
                 android:id="@+id/teachers_list_item_title_tv"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="52dp"
                 android:textSize="@dimen/molingas_list_item_title_tsx"
