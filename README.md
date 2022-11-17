@@ -1,6 +1,6 @@
 # Parallel API Calls Using Coroutine
 
-## A fully functional project wriiten in kotlin showing how to make a parrallel API call using coroutine
+## A fully functional project written in kotlin showing how to make a parrallel API call using coroutine
 
 This project using the clean architecture to structure the app. The following were done to build the app:
 
