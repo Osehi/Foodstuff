@@ -2,7 +2,7 @@
 
 ## A fully functional project written in kotlin showing how to make a parrallel API call using coroutine
 
-This project using the clean architecture to structure the app. The following were done to build the app:
+This project uses the clean architecture to structure the app. The following were done to build the app:
 
 * build a responsive user interface using constraint layout
 * implement dagger hilt for dependency injection
