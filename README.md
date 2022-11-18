@@ -7,7 +7,7 @@ This project uses the clean architecture to structure the app. The following wer
 * build a responsive user interface using constraint layout
 * implement dagger hilt for dependency injection
 * implement retrofit for network calls
-* implement Async and Await for the network calls
+* implement Async and Await for the parallel api network calls
 
 ## Screenshot
 **<img width="322" alt="Screenshot 2022-11-17 at 11 54 57" src="https://user-images.githubusercontent.com/40719260/202430506-1cd8efd7-cb72-4b10-9a96-8fd3a1b8884a.png">**
